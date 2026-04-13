@@ -4,10 +4,20 @@ import Demo
 class PrinterI(Demo.Printer):
     def __init__(self, t):
         self.t = t
-        
+
     def printString(self, s, current=None):
         print(self.t, s)
         return s + "*"
+
+    def countWords(self, s, current=None):
+        count = len(s.split())
+        print(self.t, f"countWords({s!r}) = {count}")
+        return count
+
+    def toUpperCase(self, s, current=None):
+        result = s.upper()
+        print(self.t, f"toUpperCase({s!r}) = {result!r}")
+        return result
 
 communicator = Ice.initialize(sys.argv) 
 

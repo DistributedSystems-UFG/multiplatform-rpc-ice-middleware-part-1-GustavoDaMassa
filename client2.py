@@ -15,4 +15,14 @@ print(rep)
 rep = printer2.printString("Hello World from printer2!")
 print(rep)
 
+count = printer1.countWords("Hello World from printer1!")
+print(f"printer1 word count: {count}")
+count = printer2.countWords("Hello World from printer2!")
+print(f"printer2 word count: {count}")
+
+upper = printer1.toUpperCase("Hello World from printer1!")
+print(f"printer1 upper: {upper}")
+upper = printer2.toUpperCase("Hello World from printer2!")
+print(f"printer2 upper: {upper}")
+
 communicator.waitForShutdown()
